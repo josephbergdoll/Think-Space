@@ -1,0 +1,57 @@
+/* Typefaces */
+
+@font-face {
+    font-family: 'sans';
+    src: url('../fonts/bentonsans-bold-webfont.eot');
+    src: url('../fonts/bentonsans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bentonsans-bold-webfont.woff') format('woff'),
+         url('../fonts/bentonsans-bold-webfont.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'sans';
+    src: url('../fonts/bentonsans-medium-webfont.eot');
+    src: url('../fonts/bentonsans-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bentonsans-medium-webfont.woff') format('woff'),
+         url('../fonts/bentonsans-medium-webfont.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sans';
+    src: url('../fonts/bentonsans-regular-webfont.eot');
+    src: url('../fonts/bentonsans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bentonsans-regular-webfont.woff') format('woff'),
+         url('../fonts/bentonsans-regular-webfont.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'sans';
+    src: url('../fonts/bentonsans-book-webfont.eot');
+    src: url('../fonts/bentonsans-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bentonsans-book-webfont.woff') format('woff'),
+         url('../fonts/bentonsans-book-webfont.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'sans';
+    src: url('../fonts/bentonsans-light-webfont.eot');
+    src: url('../fonts/bentonsans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bentonsans-light-webfont.woff') format('woff'),
+         url('../fonts/bentonsans-light-webfont.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+$sans: 'sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$bodoni: 'BauerBodni BT', 'ltc-bodoni-175', Georgia, 'Times New Roman', Times, serif;
