@@ -1,6 +1,6 @@
 /* Thinking Space
-Design & Development ©2013 Joseph Bergdoll
-www.osephj.com / @josephbergdoll
+Design & Development (c) 2013 Joseph Bergdoll
+www.osephj.com @josephbergdoll
 */
 
 @import "reset";
@@ -22,10 +22,9 @@ html {
 }
 
 body {
-	font-size: 100%;
+	font-size: 16px;
 	font-family:$sans;
 	font-weight: 500;
-	-webkit-font-smoothing: antialiased;
 	width: 100%;
 	height: 100%;
 	overflow-x: hidden;
@@ -43,20 +42,35 @@ body {
 	background-color: rgba(0,0,0,0.7);
 }
 
-a,h1,h2,h3,h3,h5,section,article,ul,li,div,header,nav,footer,span {
-	@include transition (all .25s ease-in);
-}
-
 a {
 	text-decoration: none;
 }
 
-br.clear {
-	clear:left;
+.clearfix {
+  display: block;
 }
 
-br.both {
-	clear: both;
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+em {
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.hide-text {
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .slideWrapper {
@@ -79,91 +93,87 @@ br.both {
 
 #header {
 	width: 100%;
-	padding: 0.5em 0.75em;
+	
 	height: auto;
 	position: absolute;
 	z-index: 3;
-	@include background-image(url(../img/dots.png));
+	//@include background-image(url(../img/dots.png));
+	//background: white;
+	
+}
+
+#header .inner {
+	background: rgba(255,255,255,0.25);
+	padding: 0.5em 1em;
+	@include media(mobileAll) {
+		width: 100%;
+	}
 	@include media(tabletPortait) {
-		padding: 0.5em 7.5%;
+		padding: 0.5em 2em;
+		width: 95%;
 	}
 	@include media(laptop) {
-		padding: 0.5em 2em;
+		padding: 0.5em 1.75em 0.75em;
 	}
 		a.logo {
 			display: block;
 			float: left;
-			width: 3em;
-			height: 3em;
-			background: url(../img/icon_black.png) center center no-repeat;
-			background-size: cover;
+			width: 8em;
+			height: 3.5em;
+			background: url(../img/blacklogo.svg) center center no-repeat;
+			background-size: 100%;
 			text-indent: -9999px;
 		}
-		a.navigation {
+		.hamburger {
 			display: block;
-			padding: 0.75em 1em;
-			margin: 0.5em 0 0 0;
+			margin: 0.3em 0 0 0;
+			width: 3em;
+			height: 3em;
+			background: url(../img/hamburger.svg) center center no-repeat;
+			background-size: 55%;
 			float: right;
-			background: #2f2f2f;
-			color: $linkgray;
-			text-transform: uppercase;
-			font-weight: 700;
-			font-size: 0.75em;
-			border-radius: 3px;
-			border: 1px solid black;
-			box-shadow: inset 0 1px 3px 0 black;
-			text-shadow: 1px 1px 0px black;
-				&:hover {
-					color: white;
-						border: 1px solid #dedede;
-				}
-				&:active {
-					box-shadow: inset 0 1px 0 0 black, inset 0 0 20px 6px #000;
-					color: #ccc;
-				}
+			cursor: pointer;
 			@include media(tabletLandscapeUp) {
 				display: none;
 			}
 		}
-	
-	nav.desktopNav {
+}
+.desktopNav {
 				float: right;
-				font-size: 0.75em;
-				margin: 0.5em 0 0 0;
 				display: none;
+				margin: 0.45em 0 0 0;
 				@include media (tabletLandscapeUp) {
 					display: block;
 				}
 				a {
 					display: inline-block;
-					padding: 0.75em 1em;
+					padding: 0.4rem 1rem;
 					margin: 0 0.3em 0 0;
-					background: #2f2f2f;
-					color: $linkgray;
+					font-size: 0.75em;
+					color: #3f3f3f;
+					border: 3px solid #3f3f3f;
 					text-transform: uppercase;
-					font-weight: 600;
-					text-shadow: 1px 1px 0px black;
-					border-radius: 3px;
-					border: 1px solid rgba(0,0,0,0.6);
-					box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.5);
+					font-weight: 700;
 					&:hover {
-						color: white;
-						border: 1px solid #dedede;
+						color: #eaeaea;
+						border: 3px solid #222;
+						background: #222;
+						-webkit-font-smoothing: antialiased;
+
 					}
 					&:active {
-					box-shadow: inset 0 1px 0 0 black, inset 0 0 20px 6px #000;
 					color: #ccc;
 				}
 					&:last-child {
 						margin: 0;
 					}
 				}
-			}
-
 }
 
-div.inner {
-	width: 100%;
+
+
+.inner {
+	width: 95%;
 	max-width: 90em;
 	margin: 0 auto;
 	line-height: 1.313em;
@@ -224,7 +234,7 @@ blockquote {
 		}
 	}
 
-section.one {
+.one {
 	width: 100%;
 	height: 95%;
 	display: table;
@@ -260,9 +270,7 @@ section.one {
 		}
 }
 
-section.two {
-	border-top: 1px solid $bordergray;
-	border-bottom: 1px solid $bordergray;
+.two {
 	background-color: $bggray;
 	text-align: left;
 	
@@ -387,7 +395,7 @@ li.productivity div.icon {
 }
 
 
-section.three {
+.three {
 	background: white;
 	video {
 		display: block;
@@ -409,9 +417,7 @@ h2 {
 		margin: 0 auto 2em;
 	}
 
-section.four {
-	border-top: 1px solid $bordergray;
-	border-bottom: 1px solid $bordergray;
+.four {
 	background-color: $bggray;
 
 	
@@ -427,13 +433,16 @@ section.four {
 			}
 		}
 	}
-	
+
 	article.fervor {
 		margin: 0 auto 1em;
 		@include fervorTypeStyles;
 		@include columns(1 0em);
 		@include media (tabletPortrait) {
 			@include columns(2 3em);
+			-webkit-column-gap: 3em;
+			-moz-column-gap: 3em;
+			column-gap: 3em;
 		}
 		@include media (tabletLandscape) {
 			width: 90%;
@@ -450,6 +459,10 @@ section.four {
 		max-width: 100%;
 		height: auto;
 		margin: 0 auto 1em;
+		@include media (mobileAll) {
+			max-width: 120%;
+			margin: 0 0 1em -10%;
+		}
 	}
 	
 	article.single {
@@ -573,7 +586,7 @@ section.five {
 }
 
 footer {
-	background-color: #2f2f2f;
+	background-color: #00c0ff;
 	img.footerLogo {
 		display: block;
 		margin: 0 auto 1em;
