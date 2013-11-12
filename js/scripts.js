@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('a.navigation').click(function(){
+	$('.hamburger').click(function(){
 		$('#sections').addClass('showSections');
 		$('.wrapper').addClass('slideWrapper').delay(400).queue(function(next){
 			$(this).addClass('fade');

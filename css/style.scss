@@ -245,7 +245,7 @@ blockquote {
 	@include media(desktop) {
 		
 	}
-		h1.hero {
+		.hero {
 			width: 85%;
 			font-weight: 200;
 			line-height: 1.4em;
@@ -282,7 +282,7 @@ blockquote {
 			margin: 0 auto 1em auto;
 			display: table;
 		}
-		article.mission {
+		.mission {
 			width: 100%;
 			@include media (laptop) {
 				width:50%;
@@ -359,7 +359,7 @@ blockquote {
 				font-size: 0.875em;
 			}
 			
-			div.icon {
+			.icon {
 				position: absolute;
 				top: -1.25em;
 				left: 50%;
@@ -378,33 +378,34 @@ blockquote {
 }
 
 
-li.engagement div.icon {
+.engagement .icon {
 	background-image: url(../img/people.svg);
 }
 
-li.dynamic div.icon {
+.dynamic .icon {
 	background-image: url(../img/talk_new.svg);
 }
 
-li.rent div.icon {
-	background-image: url(../img/buildings.svg);
+.rent .icon {
+	background-image: url(../img/buildings_new.svg);
 }
 
-li.productivity div.icon {
+.productivity .icon {
 	background-image: url(../img/productive_new.svg);
 }
 
 
 .three {
 	background: white;
-	video {
+}
+
+.three video {
 		display: block;
 		max-width: 100%;
 		height: auto;
 		margin: 0 auto;
 		border: 1px solid $bordergray;
 		box-shadow: 0 0 8px $bordergray;
-	}
 }
 
 h2 {

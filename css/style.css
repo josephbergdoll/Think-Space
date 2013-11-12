@@ -270,7 +270,7 @@ blockquote {
   -webkit-transition: background-image 0.5s ease-in-out, background-position 0.5s ease-in-out;
   -moz-transition: background-image 0.5s ease-in-out, background-position 0.5s ease-in-out;
   transition: background-image 0.5s ease-in-out, background-position 0.5s ease-in-out; }
-  .one h1.hero {
+  .one .hero {
     width: 85%;
     font-weight: 200;
     line-height: 1.4em;
@@ -284,13 +284,13 @@ blockquote {
     -moz-transition: left 0.5s ease-in-out, opacity 0.4s ease-in-out;
     transition: left 0.5s ease-in-out, opacity 0.4s ease-in-out; }
     @media only screen and (max-width: 767px) {
-      .one h1.hero {
+      .one .hero {
         width: 100%;
         font-weight: 400; } }
     @media only screen and (min-width: 1600px) {
-      .one h1.hero {
+      .one .hero {
         margin: 20% auto 0; } }
-    .one h1.hero.left {
+    .one .hero.left {
       left: -1%;
       opacity: 0; }
 
@@ -304,16 +304,16 @@ blockquote {
     line-height: 1em;
     margin: 0 auto 1em auto;
     display: table; }
-  .two article.mission {
+  .two .mission {
     width: 100%; }
     @media only screen and (min-width: 1350px) {
-      .two article.mission {
+      .two .mission {
         width: 50%;
         margin: 0 auto; } }
-    .two article.mission p {
+    .two .mission p {
       line-height: 1.6em;
       margin: 0 0 1.25em 0; }
-      .two article.mission p:last-child {
+      .two .mission p:last-child {
         margin: 0; }
 
 .tabs {
@@ -365,7 +365,7 @@ blockquote {
           text-align: left; } }
     .tabs li p {
       font-size: 0.875em; }
-    .tabs li div.icon {
+    .tabs li .icon {
       position: absolute;
       top: -1.25em;
       left: 50%;
@@ -375,31 +375,32 @@ blockquote {
       background-size: cover;
       background-repeat: no-repeat; }
       @media only screen and (min-width: 768px) {
-        .tabs li div.icon {
+        .tabs li .icon {
           left: 0;
           margin: 0; } }
 
-li.engagement div.icon {
+.engagement .icon {
   background-image: url(../img/people.svg); }
 
-li.dynamic div.icon {
+.dynamic .icon {
   background-image: url(../img/talk_new.svg); }
 
-li.rent div.icon {
-  background-image: url(../img/buildings.svg); }
+.rent .icon {
+  background-image: url(../img/buildings_new.svg); }
 
-li.productivity div.icon {
+.productivity .icon {
   background-image: url(../img/productive_new.svg); }
 
 .three {
   background: white; }
-  .three video {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    border: 1px solid gainsboro;
-    box-shadow: 0 0 8px gainsboro; }
+
+.three video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid gainsboro;
+  box-shadow: 0 0 8px gainsboro; }
 
 h2 {
   font-weight: 700;
