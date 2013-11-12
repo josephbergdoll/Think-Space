@@ -14,6 +14,21 @@ $bordergray: rgba(220,220,220,1);
 $bggray: rgba(242,242,242,1);
 $textcolor: rgba(0,0,0,0.75);
 
+@mixin fervorTypeStyles {
+		p {
+			font-size: 0.913em;
+			line-height: 1.6;
+			margin-bottom: 1em;
+			@include media(laptop) {
+				font-size: 0.875em;
+				line-height: 1.8;
+			}
+			&:last-child {
+				margin: 0;
+			}
+		}
+}
+
 /* CSS Document */
 
 html {
@@ -58,6 +73,7 @@ a {
   clear: both;
   height: 0;
 }
+
 em {
   font-style: italic;
 }
@@ -84,114 +100,6 @@ a {
 		}
 	}
 
-.headerWrapper {
-	position: fixed;
-	width: 100%;
-	z-index:3;
-}
-
-
-#header {
-	width: 100%;
-	
-	height: auto;
-	position: absolute;
-	z-index: 3;
-	//@include background-image(url(../img/dots.png));
-	//background: white;
-	
-}
-
-#header .inner {
-	background: rgba(255,255,255,0.25);
-	padding: 0.5em 1em;
-	@include media(mobileAll) {
-		width: 100%;
-	}
-	@include media(tabletPortait) {
-		padding: 0.5em 2em;
-		width: 95%;
-	}
-	@include media(laptop) {
-		padding: 0.5em 1.75em 0.75em;
-	}
-		a.logo {
-			display: block;
-			float: left;
-			width: 8em;
-			height: 3.5em;
-			background: url(../img/blacklogo.svg) center center no-repeat;
-			background-size: 100%;
-			text-indent: -9999px;
-		}
-		.hamburger {
-			display: block;
-			margin: 0.3em 0 0 0;
-			width: 3em;
-			height: 3em;
-			background: url(../img/hamburger.svg) center center no-repeat;
-			background-size: 55%;
-			float: right;
-			cursor: pointer;
-			@include media(tabletLandscapeUp) {
-				display: none;
-			}
-		}
-}
-.desktopNav {
-				float: right;
-				display: none;
-				margin: 0.45em 0 0 0;
-				@include media (tabletLandscapeUp) {
-					display: block;
-				}
-				a {
-					display: inline-block;
-					padding: 0.4rem 1rem;
-					margin: 0 0.3em 0 0;
-					font-size: 0.75em;
-					color: #3f3f3f;
-					border: 3px solid #3f3f3f;
-					text-transform: uppercase;
-					font-weight: 700;
-					&:hover {
-						color: #eaeaea;
-						border: 3px solid #222;
-						background: #222;
-						-webkit-font-smoothing: antialiased;
-
-					}
-					&:active {
-					color: #ccc;
-				}
-					&:last-child {
-						margin: 0;
-					}
-				}
-}
-
-
-
-.inner {
-	width: 95%;
-	max-width: 90em;
-	margin: 0 auto;
-	line-height: 1.313em;
-	@include media(tabletLandscapeUp) {
-		width: 87%;
-	}
-}
-
-.wrapper {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	-webkit-overflow-scrolling: touch;
-	z-index: 2;
-	background: white;
-
-}
-
 section, footer {
 	width: 100%;
 	padding: 2em 1.5em;
@@ -204,7 +112,110 @@ section, footer {
 	}
 }
 
-.newbg {
+.inner {
+	width: 95%;
+	max-width: 90em;
+	margin: 0 auto;
+	line-height: 1.313em;
+	@include media(tabletLandscapeUp) {
+		width: 87%;
+	}
+}
+
+.header-wrapper {
+	position: fixed;
+	width: 100%;
+	z-index:3;
+}
+
+
+#header {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	z-index: 3;
+	//@include background-image(url(../img/dots.png));
+	//background: white;
+}
+
+.header-wrapper .inner {
+	background: rgba(255,255,255,0.25);
+	padding: 0.5em 1em;
+	@include media(mobileAll) {
+		width: 100%;
+	}
+	@include media(tabletPortait) {
+		padding: 0.5em 2em;
+		width: 95%;
+	}
+	@include media(laptop) {
+		padding: 0.5em 1.75em 0.75em;
+	}
+}
+
+.header-logo {
+	display: block;
+	float: left;
+	width: 8em;
+	height: 3.5em;
+	background: url(../img/blacklogo.svg) center center no-repeat;
+	background-size: 100%;
+	text-indent: -9999px;
+}
+		
+.hamburger {
+	display: block;
+	margin: 0.3em 0 0 0;
+	width: 3em;
+	height: 3em;
+	background: url(../img/hamburger.svg) center center no-repeat;
+	background-size: 55%;
+	float: right;
+	cursor: pointer;
+	@include media(tabletLandscapeUp) {
+		display: none;
+	}
+}
+
+.desktop-nav {
+	float: right;
+	display: none;
+	margin: 0.45em 0 0 0;
+	@include media (tabletLandscapeUp) {
+		display: block;
+	}
+}
+
+.desktop-nav a {
+	display: inline-block;
+	padding: 0.4rem 1rem;
+	margin: 0 0.3em 0 0;
+	font-size: 0.75em;
+	color: #3f3f3f;
+	border: 3px solid #3f3f3f;
+	text-transform: uppercase;
+	font-weight: 700;
+	&:hover {
+		color: #eaeaea;
+		border: 3px solid #222;
+		background: #222;
+		-webkit-font-smoothing: antialiased;
+	}
+	&:last-child {
+		margin: 0;
+	}
+}
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	-webkit-overflow-scrolling: touch;
+	z-index: 2;
+	background: white;
+}
+
+.blur-bg {
 	background: url(../img/landing_blur.jpg) no-repeat center 55%, url(../img/landing.jpg) no-repeat center 55% !important;
 	background-size: cover !important;
 }
@@ -215,24 +226,6 @@ section, footer {
 	/*}*/
 }
 
-blockquote {
-	width: 100%;
-	margin: 0 auto;
-		p{
-			font-family: $bodoni;
-			font-size: 1em;
-			font-style: italic;
-			text-indent: -12px;
-		}
-		footer {
-			font-weight: 700;
-			text-transform: uppercase;
-			border: .3em solid black;
-			padding: 0.813em;
-			display: table;
-			margin: 1.5em auto 0 auto;
-		}
-	}
 
 .one {
 	width: 100%;
@@ -242,62 +235,53 @@ blockquote {
 	background: url(../img/landing.jpg) no-repeat center 55%;
 	background-size: cover !important;
 	@include transition (background-image 0.5s ease-in-out, background-position 0.5s ease-in-out);
-	@include media(desktop) {
-		
-	}
-		.hero {
-			width: 85%;
-			font-weight: 200;
-			line-height: 1.4em;
-			position: relative;
-			top: -5%;
-			vertical-align: middle;
-			display: table-cell;
-			text-align: center;
-			text-shadow: 1px 1px 5px rgba(255,255,255,0.2);
-			@include transition (left 0.5s ease-in-out, opacity 0.4s ease-in-out);
-			@include media(mobileAll) {
-				width: 100%;
-				font-weight: 400;
-			}
-			@include media(desktop) {
-				margin: 20% auto 0;
-			}
-			&.left {
-				left: -1%;
-				opacity: 0;
-			}
-		}
 }
+
+.hero {
+	width: 85%;
+	font-weight: 200;
+	line-height: 1.4em;
+	position: relative;
+	top: -5%;
+	vertical-align: middle;
+	display: table-cell;
+	text-align: center;
+	text-shadow: 1px 1px 5px rgba(255,255,255,0.2);
+	@include transition (left 0.5s ease-in-out, opacity 0.4s ease-in-out);
+	@include media(mobileAll) {
+		width: 100%;
+		font-weight: 400;
+	}
+	@include media(desktop) {
+		margin: 20% auto 0;
+	}
+	&.left {
+		left: -1%;
+		opacity: 0;
+	}
+}
+
 
 .two {
 	background-color: $bggray;
 	text-align: left;
-	
-		h1 {
-			font-family: $bodoni;
-			font-style: italic;
-			font-size: 2em;
-			line-height: 1em;
-			margin: 0 auto 1em auto;
-			display: table;
-		}
-		.mission {
-			width: 100%;
-			@include media (laptop) {
-				width:50%;
-				margin: 0 auto;
-			}
-			p {
-				line-height: 1.6em;
-				margin: 0 0 1.25em 0;
-				&:last-child {
-					margin: 0;
-				}
-			}
-		}
-	
 }
+
+.mission {
+	width: 100%;
+	@include media (laptop) {
+		width:50%;
+		margin: 0 auto;
+	}
+	p {
+		line-height: 1.6em;
+		margin: 0 0 1.25em 0;
+		&:last-child {
+			margin: 0;
+		}
+	}
+}
+	
 
 .tabs {
 	width: 100%;
@@ -420,45 +404,30 @@ h2 {
 
 .four {
 	background-color: $bggray;
+	@include fervorTypeStyles;
+}
 
-	
-	@mixin fervorTypeStyles {
-		p {
-			font-size: 0.913em;
-			line-height: 1.6;
-			margin-bottom: 1em;
-			@include media(laptop) {
-				font-size: 0.875em;
-				line-height: 1.8;
-			}
-			&:last-child {
-				margin: 0;
-			}
-		}
+.two-col {
+	margin: 0 auto 1em;
+	@include columns(1 0em);
+	@include media (tabletPortrait) {
+		@include columns(2 3em);
+		-webkit-column-gap: 3em;
+		-moz-column-gap: 3em;
+		column-gap: 3em;
 	}
-
-	article.fervor {
-		margin: 0 auto 1em;
-		@include fervorTypeStyles;
-		@include columns(1 0em);
-		@include media (tabletPortrait) {
-			@include columns(2 3em);
-			-webkit-column-gap: 3em;
-			-moz-column-gap: 3em;
-			column-gap: 3em;
-		}
-		@include media (tabletLandscape) {
-			width: 90%;
-		}
-		@include media(laptop) {
-			width: 65%;
-		}
-		@include media(desktop) {
-			width: 62%;
-		}
+	@include media (tabletLandscape) {
+		width: 90%;
 	}
+	@include media(laptop) {
+		width: 65%;
+	}
+	@include media(desktop) {
+		width: 62%;
+	}
+}
 	
-	img {
+.four img {
 		max-width: 100%;
 		height: auto;
 		margin: 0 auto 2em;
@@ -466,9 +435,9 @@ h2 {
 			max-width: 120%;
 			margin: 0 0 2em -10%;
 		}
-	}
+}
 	
-	article.single {
+.single {
 		margin: 1em auto 3em;
 		@include fervorTypeStyles;
 		@include media (tabletPortait) {
@@ -530,8 +499,6 @@ h2 {
 		}
 	}
 	
-	
-}
 
 
 section.five {
