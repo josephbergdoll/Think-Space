@@ -383,13 +383,13 @@ li.engagement div.icon {
   background-image: url(../img/people.svg); }
 
 li.dynamic div.icon {
-  background-image: url(../img/talk.svg); }
+  background-image: url(../img/talk_new.svg); }
 
 li.rent div.icon {
   background-image: url(../img/buildings.svg); }
 
 li.productivity div.icon {
-  background-image: url(../img/productive.svg); }
+  background-image: url(../img/productive_new.svg); }
 
 .three {
   background: white; }
@@ -405,8 +405,8 @@ h2 {
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1em;
-  padding: 0.6em 0.9em 0.5em;
-  border: 5px solid rgba(0, 0, 0, 0.75);
+  padding: 0.75em 1.25em 0.65em;
+  border: 4px solid rgba(0, 0, 0, 0.75);
   display: table;
   margin: 0 auto 2em; }
 
@@ -418,11 +418,13 @@ h2 {
     -moz-columns: 1 0em;
     columns: 1 0em; }
     .four article.fervor p {
-      font-size: 0.875em;
+      font-size: 0.913em;
+      line-height: 1.6;
       margin-bottom: 1em; }
       @media only screen and (min-width: 1350px) {
         .four article.fervor p {
-          font-size: 0.825em; } }
+          font-size: 0.875em;
+          line-height: 1.8; } }
       .four article.fervor p:last-child {
         margin: 0; }
     @media only screen and (min-width: 768px) {
@@ -445,19 +447,21 @@ h2 {
   .four img {
     max-width: 100%;
     height: auto;
-    margin: 0 auto 1em; }
+    margin: 0 auto 2em; }
     @media only screen and (max-width: 767px) {
       .four img {
         max-width: 120%;
-        margin: 0 0 1em -10%; } }
+        margin: 0 0 2em -10%; } }
   .four article.single {
-    margin: 1em auto 0.5em; }
+    margin: 1em auto 3em; }
     .four article.single p {
-      font-size: 0.875em;
+      font-size: 0.913em;
+      line-height: 1.6;
       margin-bottom: 1em; }
       @media only screen and (min-width: 1350px) {
         .four article.single p {
-          font-size: 0.825em; } }
+          font-size: 0.875em;
+          line-height: 1.8; } }
       .four article.single p:last-child {
         margin: 0; }
     @media only screen and (min-width: 992px) and (max-width: 1349px) {
@@ -470,49 +474,53 @@ h2 {
       .four article.single {
         width: 31%; } }
   .four article.singleLeft {
-    margin: 0 auto 1.5em; }
+    margin: 0 auto 3em; }
     .four article.singleLeft p {
-      font-size: 0.875em;
+      font-size: 0.913em;
+      line-height: 1.6;
       margin-bottom: 1em; }
       @media only screen and (min-width: 1350px) {
         .four article.singleLeft p {
-          font-size: 0.825em; } }
+          font-size: 0.875em;
+          line-height: 1.8; } }
       .four article.singleLeft p:last-child {
         margin: 0; }
     @media only screen and (min-width: 992px) and (max-width: 1349px) {
       .four article.singleLeft {
         width: 45%;
-        margin: 0 0 1.5em 5%; } }
+        margin: 0 0 3em 5%; } }
     @media only screen and (min-width: 1350px) {
       .four article.singleLeft {
         width: 32.5%;
-        margin: 0 0 1.5em 17.5%; } }
+        margin: 0 0 3em 17.5%; } }
     @media only screen and (min-width: 1600px) {
       .four article.singleLeft {
         width: 31%;
-        margin: 0 0 1.5em 19%; } }
+        margin: 0 0 3em 19%; } }
   .four article.singleRight {
-    margin: 0 auto 1.5em; }
+    margin: 0 auto 2em; }
     .four article.singleRight p {
-      font-size: 0.875em;
+      font-size: 0.913em;
+      line-height: 1.6;
       margin-bottom: 1em; }
       @media only screen and (min-width: 1350px) {
         .four article.singleRight p {
-          font-size: 0.825em; } }
+          font-size: 0.875em;
+          line-height: 1.8; } }
       .four article.singleRight p:last-child {
         margin: 0; }
     @media only screen and (min-width: 992px) and (max-width: 1349px) {
       .four article.singleRight {
         width: 45%;
-        margin: 0 0 1.5em 50%; } }
+        margin: 0 0 3em 50%; } }
     @media only screen and (min-width: 1350px) {
       .four article.singleRight {
         width: 32.5%;
-        margin: 0 0 1.5em 60%; } }
+        margin: 0 0 3em 60%; } }
     @media only screen and (min-width: 1600px) {
       .four article.singleRight {
         width: 31%;
-        margin: 0 0 1.5em 52%; } }
+        margin: 0 0 3em 52%; } }
 
 section.five {
   background-color: white; }

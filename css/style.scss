@@ -383,7 +383,7 @@ li.engagement div.icon {
 }
 
 li.dynamic div.icon {
-	background-image: url(../img/talk.svg);
+	background-image: url(../img/talk_new.svg);
 }
 
 li.rent div.icon {
@@ -391,7 +391,7 @@ li.rent div.icon {
 }
 
 li.productivity div.icon {
-	background-image: url(../img/productive.svg);
+	background-image: url(../img/productive_new.svg);
 }
 
 
@@ -411,8 +411,8 @@ h2 {
 		font-weight: 700;
 		text-transform: uppercase;
 		line-height: 1em;
-		padding: 0.6em 0.9em 0.5em;
-		border: 5px solid $textcolor;
+		padding: 0.75em 1.25em 0.65em;
+		border: 4px solid $textcolor;
 		display: table;
 		margin: 0 auto 2em;
 	}
@@ -423,10 +423,12 @@ h2 {
 	
 	@mixin fervorTypeStyles {
 		p {
-			font-size: 0.875em;
+			font-size: 0.913em;
+			line-height: 1.6;
 			margin-bottom: 1em;
 			@include media(laptop) {
-				font-size: 0.825em;
+				font-size: 0.875em;
+				line-height: 1.8;
 			}
 			&:last-child {
 				margin: 0;
@@ -458,15 +460,15 @@ h2 {
 	img {
 		max-width: 100%;
 		height: auto;
-		margin: 0 auto 1em;
+		margin: 0 auto 2em;
 		@include media (mobileAll) {
 			max-width: 120%;
-			margin: 0 0 1em -10%;
+			margin: 0 0 2em -10%;
 		}
 	}
 	
 	article.single {
-		margin: 1em auto 0.5em;
+		margin: 1em auto 3em;
 		@include fervorTypeStyles;
 		@include media (tabletPortait) {
 			width: 50%;
@@ -487,43 +489,43 @@ h2 {
 	}
 	
 	article.singleLeft {
-		margin: 0 auto 1.5em;
+		margin: 0 auto 3em;
 		@include fervorTypeStyles;
 		@include media (tabletPortait) {
 			width: 50%;
 		}
 		@include media (tabletLandscape) {
 			width: 45%;
-			margin: 0 0 1.5em 5%;
+			margin: 0 0 3em 5%;
 		}
 		@include media (laptop) {
 			width: 32.5%;
-			margin: 0 0 1.5em 17.5%;
+			margin: 0 0 3em 17.5%;
 		}
 		@include media (desktop) {
 			width: 31%;
-			margin: 0 0 1.5em 19%;
+			margin: 0 0 3em 19%;
 		}
 	}
 	
 	article.singleRight {
-		margin: 0 auto 1.5em;
+		margin: 0 auto 2em;
 		@include fervorTypeStyles;
 		@include media (tabletPortait) {
 			width: 50%;
-			margin: 0 0 1.5em 50%
+			margin: 0 0 3em 50%
 		}
 		@include media (tabletLandscape) {
 			width: 45%;
-			margin: 0 0 1.5em 50%;
+			margin: 0 0 3em 50%;
 		}
 		@include media (laptop) {
 			width: 32.5%;
-			margin: 0 0 1.5em 60%;
+			margin: 0 0 3em 60%;
 		}
 		@include media (desktop) {
 			width: 31%;
-			margin: 0 0 1.5em 52%;
+			margin: 0 0 3em 52%;
 		}
 	}
 	
