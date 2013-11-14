@@ -39,6 +39,11 @@ $('#sections a').click(function (e) {
     },500);});
 	
 
-	
+});
+
+
+$(window).load(function(){
+
+	$('body').delay(500).queue(function(){$(this).addClass('bg-blur');});
 
 });
