@@ -21,9 +21,8 @@ $('.close').click(function(){
   $('body').unbind('touchmove');
 });
 	
-	$(".scroll").click(function(event){
-event.preventDefault();
-$('html,body').animate({scrollTop:$(this.hash).offset().top - $('header').outerHeight()}, 550);
+$(".scroll").click(function(event){event.preventDefault();
+	$('html,body').animate({scrollTop:$(this.hash).offset().top - $('header').outerHeight()}, 550);
 });
 
 $('#sections a').click(function (e) {
