@@ -259,7 +259,7 @@ section, footer {
 .hero {
   width: 85%;
   font-weight: 200;
-  line-height: 1.4em;
+  line-height: 1.2em;
   position: relative;
   top: -5%;
   vertical-align: middle;
@@ -276,9 +276,6 @@ section, footer {
   @media only screen and (min-width: 1600px) {
     .hero {
       margin: 20% auto 0; } }
-  .hero.left {
-    left: -1%;
-    opacity: 0; }
 
 .two {
   background-color: #f2f2f2;
@@ -299,65 +296,75 @@ section, footer {
 .tabs {
   width: 100%;
   padding: 4em 0 0 0; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
     .tabs {
-      padding: 3em 0 0 0; } }
+      padding: 3em 3em 0 3em; } }
+  @media only screen and (min-width: 992px) and (max-width: 1349px) {
+    .tabs {
+      padding: 4em 4em 0 4em; } }
   @media only screen and (min-width: 1350px) {
     .tabs {
-      padding: 4em 0 0.5em 0; } }
-  .tabs li {
-    display: block;
-    list-style-type: none;
-    float: left;
-    background: white;
-    position: relative;
-    text-align: left;
-    width: 100%;
-    margin: 0 0 4em 0;
-    padding: 1.5em 0.75em 0.75em;
-    /* iPad Styles */ }
-    @media only screen and (min-width: 768px) {
+      padding: 1em 0 0.5em 0; } }
+
+.tabs li {
+  display: block;
+  list-style-type: none;
+  float: left;
+  background: white;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  margin: 0 0 4em 0;
+  padding: 1.75em 1.5em 1.5em;
+  min-height: 6em;
+  /* iPad Styles */ }
+  @media only screen and (min-width: 768px) {
+    .tabs li {
+      width: 47%;
+      margin: 0 6% 8% 0;
+      padding: 2em 2em 2em;
+      height: 15em; } }
+    @media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1349px) {
+      .tabs li:nth-child(2n) {
+        margin: 0 0 4% 0; } }
+    @media only screen and (min-width: 768px) and (min-width: 992px) and (max-width: 1349px) {
       .tabs li {
-        width: 49.25%;
-        margin: 0 1.5% 4% 0;
-        padding: 2em 1em 1em; } }
-      @media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1349px) {
-        .tabs li:nth-child(2n) {
-          margin: 0 0 4% 0; } }
-      @media only screen and (min-width: 768px) and (min-width: 1350px) {
-        .tabs li {
-          width: 23.5%;
-          margin: 0 2% 0 0;
-          padding: 2em 1em 1em; }
-          .tabs li:nth-child(n+4) {
-            margin: 0; } }
-    .tabs li h1 {
-      font-family: "sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
-      font-weight: 700;
-      text-transform: uppercase;
-      font-style: normal;
-      font-size: 0.813em;
-      margin-bottom: 0.2em;
-      text-align: center;
-      display: block; }
-      @media only screen and (min-width: 768px) {
-        .tabs li h1 {
-          text-align: left; } }
-    .tabs li p {
-      font-size: 0.875em; }
-    .tabs li .icon {
-      position: absolute;
-      top: -1.25em;
-      left: 50%;
-      margin: 0 0 0 -1.25em;
-      width: 2.5em;
-      height: 2.5em;
-      background-size: cover;
-      background-repeat: no-repeat; }
-      @media only screen and (min-width: 768px) {
-        .tabs li .icon {
-          left: 0;
-          margin: 0; } }
+        height: 12.5em; } }
+  @media only screen and (min-width: 1350px) {
+    .tabs li {
+      width: 23.5%;
+      margin: 0 2% 0 0;
+      padding: 2.5em 2em 2em 2em;
+      height: 16em; }
+      .tabs li:nth-child(n+4) {
+        margin: 0; } }
+  @media only screen and (min-width: 1600px) {
+    .tabs li {
+      height: 14em; } }
+
+.tabs h1 {
+  font-family: "sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 0.813em;
+  line-height: 1.3;
+  margin: 0 0 0.5rem;
+  text-align: center;
+  display: block; }
+
+.tabs p {
+  font-size: 0.875em; }
+
+.tabs .icon {
+  position: absolute;
+  top: -1.25em;
+  left: 50%;
+  margin: 0 0 0 -1.25em;
+  width: 2.5em;
+  height: 2.5em;
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .engagement .icon {
   background-image: url(../img/people.svg); }
@@ -396,16 +403,20 @@ h2 {
   .four p {
     font-size: 0.913em;
     line-height: 1.6;
-    margin-bottom: 1em; }
+    margin: 0 0 1em 0; }
     @media only screen and (min-width: 1350px) {
       .four p {
         font-size: 0.875em;
+        line-height: 1.8; } }
+    @media only screen and (min-width: 1600px) {
+      .four p {
+        font-size: 1em;
         line-height: 1.8; } }
     .four p:last-child {
       margin: 0; }
 
 .two-col {
-  margin: 0 auto 1em;
+  margin: 0 auto 2em;
   -webkit-columns: 1 0em;
   -moz-columns: 1 0em;
   columns: 1 0em; }
@@ -441,10 +452,14 @@ h2 {
   .single p {
     font-size: 0.913em;
     line-height: 1.6;
-    margin-bottom: 1em; }
+    margin: 0 0 1em 0; }
     @media only screen and (min-width: 1350px) {
       .single p {
         font-size: 0.875em;
+        line-height: 1.8; } }
+    @media only screen and (min-width: 1600px) {
+      .single p {
+        font-size: 1em;
         line-height: 1.8; } }
     .single p:last-child {
       margin: 0; }
@@ -463,10 +478,14 @@ article.singleLeft {
   article.singleLeft p {
     font-size: 0.913em;
     line-height: 1.6;
-    margin-bottom: 1em; }
+    margin: 0 0 1em 0; }
     @media only screen and (min-width: 1350px) {
       article.singleLeft p {
         font-size: 0.875em;
+        line-height: 1.8; } }
+    @media only screen and (min-width: 1600px) {
+      article.singleLeft p {
+        font-size: 1em;
         line-height: 1.8; } }
     article.singleLeft p:last-child {
       margin: 0; }
@@ -488,10 +507,14 @@ article.singleRight {
   article.singleRight p {
     font-size: 0.913em;
     line-height: 1.6;
-    margin-bottom: 1em; }
+    margin: 0 0 1em 0; }
     @media only screen and (min-width: 1350px) {
       article.singleRight p {
         font-size: 0.875em;
+        line-height: 1.8; } }
+    @media only screen and (min-width: 1600px) {
+      article.singleRight p {
+        font-size: 1em;
         line-height: 1.8; } }
     article.singleRight p:last-child {
       margin: 0; }
