@@ -47,9 +47,6 @@ body {
 	width: 100%;
 	height: 100%;
 	overflow-x: hidden;
-	@include media (mobileAll) {
-		font-size: 0.875em;
-	}
 }
 
 * {
@@ -97,23 +94,10 @@ a {
 	left: -16em;
 }
 
-.fade {
-		opacity: 0.3;
-		@include media(desktop) {
-			opacity: 0.6;
-		}
-	}
-
 section, footer {
 	width: 100%;
 	padding: 2em 1.5em;
 	color: $textcolor;
-	@include media(tabletPortait) {
-		padding: 2em 7.5%;
-	}
-	@include media(laptop) {
-		padding: 3em 2em;
-	}
 }
 
 .inner {
@@ -121,9 +105,6 @@ section, footer {
 	max-width: 90em;
 	margin: 0 auto;
 	line-height: 1.313em;
-	@include media(tabletLandscapeUp) {
-		width: 87%;
-	}
 }
 
 .header-wrapper {
@@ -145,16 +126,6 @@ section, footer {
 .header-wrapper .inner {
 	background: rgba(255,255,255,0.25);
 	padding: 0.5em 1em;
-	@include media(mobileAll) {
-		width: 100%;
-	}
-	@include media(tabletPortait) {
-		padding: 0.5em 2em;
-		width: 95%;
-	}
-	@include media(laptop) {
-		padding: 0.5em 1.75em 0.75em;
-	}
 }
 
 .header-logo {
@@ -176,18 +147,12 @@ section, footer {
 	background-size: 55%;
 	float: right;
 	cursor: pointer;
-	@include media(tabletLandscapeUp) {
-		display: none;
-	}
 }
 
 .desktop-nav {
 	float: right;
 	display: none;
 	margin: 0.45em 0 0 0;
-	@include media (tabletLandscapeUp) {
-		display: block;
-	}
 }
 
 .desktop-nav a {
@@ -252,13 +217,6 @@ section, footer {
 	text-align: center;
 	text-shadow: 1px 1px 5px rgba(255,255,255,0.2);
 	@include transition (left 0.5s ease-in-out, opacity 0.4s ease-in-out);
-	@include media(mobileAll) {
-		width: 100%;
-		font-weight: 400;
-	}
-	@include media(desktop) {
-		margin: 20% auto 0;
-	}
 }
 
 
@@ -269,10 +227,6 @@ section, footer {
 
 .mission {
 	width: 100%;
-	@include media (laptop) {
-		width:50%;
-		margin: 0 auto;
-	}
 	p {
 		line-height: 1.6em;
 		margin: 0 0 1.25em 0;
@@ -286,15 +240,6 @@ section, footer {
 .tabs {
 	width: 100%;
 	padding: 4em 0 0 0;
-	@include media(tabletPortraitOnly) {
-		padding: 3em 3em 0 3em;
-	}
-	@include media(tabletLandscape) {
-		padding: 4em 4em 0 4em;
-	}
-	@include media(laptop) {
-		padding: 1em 0 0.5em 0;
-	}
 }
 
 .tabs li {
@@ -308,34 +253,6 @@ section, footer {
 			margin: 0 0 4em 0;
 			padding: 1.75em 1.5em 1.5em;
 			min-height: 6em;
-			
-			/* iPad Styles */
-			@include media(tabletPortrait) {
-				width: 47%;
-				margin: 0 6% 8% 0;
-				padding: 2em 2em 2em;
-				height: 15em;
-				@include media(tabletOnly) {
-				&:nth-child(2n) {
-					margin: 0 0 4% 0;
-				}
-			}
-			@include media(tabletLandscape) {
-				height: 12.5em;
-			}
-			}
-				@include media(laptop) {
-					width: 23.5%;
-					margin: 0 2% 0 0;
-					padding: 2.5em 2em 2em 2em;
-					height: 16em;
-					&:nth-child(n+4) {
-						margin: 0;
-						}
-				}
-			@include media(desktop) {
-				height: 14em;
-			}
 }
 
 .tabs h1 {
@@ -416,172 +333,89 @@ h2 {
 .two-col {
 	margin: 0 auto 2em;
 	@include columns(1 0em);
-	@include media (tabletPortrait) {
-		@include columns(2 3em);
-		-webkit-column-gap: 3em;
-		-moz-column-gap: 3em;
-		column-gap: 3em;
-	}
-	@include media (tabletLandscape) {
-		width: 90%;
-	}
-	@include media(laptop) {
-		width: 65%;
-	}
-	@include media(desktop) {
-		width: 62%;
-	}
 }
 	
 .four img {
 		max-width: 100%;
 		height: auto;
 		margin: 0 auto 2em;
-		@include media (mobileAll) {
-			max-width: 120%;
-			margin: 0 0 2em -10%;
-		}
 }
 	
 .single {
 		margin: 1em auto 3em;
 		@include fervorTypeStyles;
-		@include media (tabletPortait) {
-			width: 50%;
-		
-		}
-		@include media (tabletLandscape) {
-			width: 45%;
-			
-		}
-		@include media (laptop) {
-			width: 32.5%;
-			
-		}
-		@include media (desktop) {
-			width: 31%;
-			
-		}
 	}
 	
-	article.singleLeft {
+	.singleLeft {
 		margin: 0 auto 3em;
 		@include fervorTypeStyles;
-		@include media (tabletPortait) {
-			width: 50%;
-		}
-		@include media (tabletLandscape) {
-			width: 45%;
-			margin: 0 0 3em 5%;
-		}
-		@include media (laptop) {
-			width: 32.5%;
-			margin: 0 0 3em 17.5%;
-		}
-		@include media (desktop) {
-			width: 31%;
-			margin: 0 0 3em 19%;
-		}
 	}
 	
-	article.singleRight {
+	.singleRight {
 		margin: 0 auto 2em;
 		@include fervorTypeStyles;
-		@include media (tabletPortait) {
-			width: 50%;
-			margin: 0 0 3em 50%
-		}
-		@include media (tabletLandscape) {
-			width: 45%;
-			margin: 0 0 3em 50%;
-		}
-		@include media (laptop) {
-			width: 32.5%;
-			margin: 0 0 3em 60%;
-		}
-		@include media (desktop) {
-			width: 31%;
-			margin: 0 0 3em 52%;
-		}
 	}
 	
 
 
-section.five {
+.five {
 	background-color: white;
+}
 	
-	article.readings {
-		h3 {
+.readings h3 {
 			text-transform: uppercase;
 			font-weight: 700;
 		}
 		
-		ul {
+.readings ul {
 		
 		margin: 1em auto 0 auto;
-		@include media (mobileAll) {
-			font-size: 0.75em;
-		}
+	}
 		
-			li {
-				display: block;
-				float: left;
-				width: 49%;
-				height: 18rem;
-				margin: 0 1% 2% 0;
-				font-size: 0.833em;
-				line-height: 1.175em;
-				text-align: center;
-				&:nth-child(2n) {
-						margin: 0 0 2% 0;
-					}
-				
-				@include media (tabletPortraitOnly) {
-					width: 31.5%;
-					margin: 0 1.5% 2% 0;
-					&:nth-child(3n) {
-						margin: 0 0 2% 0;
-					}
-				}
-				
-				@include media (tabletLandscapeUp) {
-					width: 24% !important;
-						margin: 0 1% 2% 0 !important;
-					&:nth-child(4n) {
-						margin: 0 0 2% 0 !important;
-					}
-				}
-				
-				img {
-					display: block;
-					margin: 0 auto 1em;
-				}
-			}
-		}
+.readings li {
+	display: block;
+	float: left;
+	width: 49%;
+	height: 18rem;
+	margin: 0 1% 2% 0;
+	font-size: 0.833em;
+	line-height: 1.175em;
+	text-align: center;
+	&:nth-child(2n) {
+			margin: 0 0 2% 0;
 	}
 }
+				
+.readings img {
+	display: block;
+	margin: 0 auto 1em;
+}
+		
 
 footer {
 	background-color: #00c0ff;
-	img.footerLogo {
+}
+
+.footerLogo {
 		display: block;
 		margin: 0 auto 1em;
 		width: 10em;
 		height: auto;
-	}
-	h4 {
-		color: $linkgray;
-		font-size: 0.75em;
-		line-height: 1.25em;
-		margin: 0 auto;
-		display: table;
-		font-weight: 700;
-		a {
-			color: $linkgray;
-			&:hover {
-				color: white;
-			}
-		}
+}
+
+h4 {
+	color: $linkgray;
+	font-size: 0.75em;
+	line-height: 1.25em;
+	margin: 0 auto;
+	display: table;
+	font-weight: 700;
+}
+
+a {
+	color: $linkgray;
+	&:hover {
+		color: white;
 	}
 }
 
@@ -597,50 +431,279 @@ footer {
 	right: 0;
 	width: 16em;
 	height: 100%;
-	@include media(tabletLandscapeUp) {
+}
+
+#sections ul {
+	background-color: #222;
+	padding: 1em 0 2em 1em;
+	color:white;
+	height: 100%;
+}
+#sections h2 {
+	font-size: 1em;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 0.5em 0 0 1em;
+	border: none;
+	display: block;
+}
+
+#sections li {
+	display: block;
+	height: auto;
+}
+#sections li a {
+	display: block;
+	color: #ccc;
+	padding: 1em 1em 1em 1em;
+	font-size: 1em;
+	border-radius: 3px;
+	&:hover {
+		background-color: white;
+		color: black;
+	}
+}
+
+.close {
+	width: 1.5em;
+	height: 1.5em;
+	position: absolute;
+	top: 1.35em;
+	right: 1.35em;
+	background: url(../img/icon_x_white.png) center center no-repeat;
+	background-size: cover;
+	opacity: 0.4;
+	&:hover {
+		opacity: 1;
+		cursor: pointer;
+	}
+}
+
+
+//Media Queries
+
+@include media(mobileAll) {
+	
+	body {
+		font-size: 0.875em;
+	}
+
+	.header-wrapper .inner {
+		width: 100%;
+	}
+
+	.hero {
+		width: 100%;
+		font-weight: 400;
+	}
+
+	.four img {
+		max-width: 120%;
+		margin: 0 0 2em -10%;
+	}
+
+	.readings ul {
+		font-size: 0.75em;
+	}
+
+}
+
+@include media(tabletPortraitOnly) {
+	.tabs {
+		padding: 3em 3em 0 3em;
+	}
+
+	.readings li {
+		width: 31.5%;
+		margin: 0 1.5% 2% 0;
+		&:nth-child(3n) {
+			margin: 0 0 2% 0;
+		}
+	}
+
+}
+
+@include media(tabletPortrait) {
+
+	section, footer {
+		padding: 2em 7.5%;
+	}
+
+	.header-wrapper .inner {
+		padding: 0.5em 2em;
+		width: 95%;
+	}
+
+	.tabs li {
+		width: 47%;
+		margin: 0 6% 8% 0;
+		padding: 2em 2em 2em;
+		height: 15em;
+	}
+
+	.two-col {
+		@include columns(2 3em);
+		-webkit-column-gap: 3em;
+		-moz-column-gap: 3em;
+		column-gap: 3em;
+	}
+
+	.single {
+		width: 50%;
+	}
+
+	.singleLeft {
+		width: 50%;
+	}
+
+	.singleRight {
+		width: 50%;
+		margin: 0 0 3em 50%
+	}
+
+}
+
+@include media(tabletOnly) {
+
+	.tabs li:nth-child(2n) {
+		margin: 0 0 4% 0;
+	}
+}
+
+@include media(tabletLandscape) {
+	
+	.tabs {
+		padding: 4em 4em 0 4em;
+	}
+
+	.tabs li {
+		height: 12.5em;
+	}
+	
+	.two-col {
+		width: 90%;
+	}
+
+	.single {
+		width: 45%;
+	}
+
+	.singleLeft {
+		width: 45%;
+		margin: 0 0 3em 5%;
+	}
+
+	.singleRight {
+		width: 45%;
+		margin: 0 0 3em 50%;
+	}
+
+}
+
+@include media(tabletLandscapeUp) {
+	
+	.readings li {
+		width: 24% !important;
+		margin: 0 1% 2% 0 !important;
+		&:nth-child(4n) {
+			margin: 0 0 2% 0 !important;
+		}
+	}
+
+	#sections {
 		display: none;
 	}
-	ul {
-		background-color: #222;
-		padding: 1em 0 2em 1em;
-		color:white;
-		height: 100%;
-		h2 {
-			font-size: 1em;
-			font-weight: 700;
-			text-transform: uppercase;
-			padding: 0.5em 0 0 1em;
-			border: none;
-			display: block;
-		}
-		li {
-			display: block;
-			height: auto;
-				a {
-					display: block;
-					color: #ccc;
-					padding: 1em 1em 1em 1em;
-					font-size: 1em;
-					border-radius: 3px;
-				&:hover {
-					background-color: white;
-					color: black;
-				}
-			}
-		}
+
+	.hamburger {
+		display: none;
 	}
-	div.close {
-		width: 1.5em;
-		height: 1.5em;
-		position: absolute;
-		top: 1.35em;
-		right: 1.35em;
-		background: url(../img/icon_x_white.png) center center no-repeat;
-		background-size: cover;
-		opacity: 0.4;
-			&:hover {
-				opacity: 1;
-				cursor: pointer;
-			}
+
+	.desktop-nav {
+		display: block;
 	}
+
+	.inner {
+		width: 87%;
+	}
+
+}
+
+@include media(laptop) {
+
+	section, footer {
+		padding: 3em 2em;
+	}
+
+	.header-wrapper .inner {
+		padding: 0.5em 1.75em 0.75em;
+	}
+
+	.mission {
+		width:50%;
+		margin: 0 auto;
+	}
+
+	.tabs {
+		padding: 1em 0 0.5em 0;
+	}
+
+	.tabs li {
+		width: 23.5%;
+					margin: 0 2% 0 0;
+					padding: 2.5em 2em 2em 2em;
+					height: 16em;
+					&:nth-child(n+4) {
+						margin: 0;
+					}
+	}
+
+	.two-col {
+		width: 65%;
+	}
+
+	.single {
+		width: 32.5%;
+	}
+
+	.singleLeft {
+		width: 32.5%;
+		margin: 0 0 3em 17.5%;
+	}
+
+	.singleRight {
+		width: 32.5%;
+		margin: 0 0 3em 60%;
+	}
+
+}
+
+@include media(desktop) {
+
+	.hero {
+		margin: 20% auto 0;
+	}
+
+	.tabs li {
+		height: 14em;
+	}
+
+	.two-col {
+		width: 62%;
+	}
+
+	.single {
+		width: 31%;
+	}
+
+	.singleLeft {
+		width: 31%;
+		margin: 0 0 3em 19%;
+	}
+
+	.singleRight {
+		width: 31%;
+		margin: 0 0 3em 52%;
+	}
+
+
 }

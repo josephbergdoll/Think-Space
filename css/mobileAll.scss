@@ -1,0 +1,225 @@
+@include media(mobileAll) {
+	
+	body {
+		font-size: 0.875em;
+	}
+
+	.header-wrapper .inner {
+		width: 100%;
+	}
+
+	.hero {
+		width: 100%;
+		font-weight: 400;
+	}
+
+	.four img {
+		max-width: 120%;
+		margin: 0 0 2em -10%;
+	}
+
+	.readings ul {
+		font-size: 0.75em;
+	}
+
+}
+
+@include media(tabletPortraitOnly) {
+	.tabs {
+		padding: 3em 3em 0 3em;
+	}
+
+	.readings li {
+		width: 31.5%;
+		margin: 0 1.5% 2% 0;
+		&:nth-child(3n) {
+			margin: 0 0 2% 0;
+		}
+	}
+
+}
+
+@include media(tabletPortrait) {
+
+	section, footer {
+		padding: 2em 7.5%;
+	}
+
+	.header-wrapper .inner {
+		padding: 0.5em 2em;
+		width: 95%;
+	}
+
+	.tabs li {
+		width: 47%;
+		margin: 0 6% 8% 0;
+		padding: 2em 2em 2em;
+		height: 15em;
+	}
+
+	.two-col {
+		@include columns(2 3em);
+		-webkit-column-gap: 3em;
+		-moz-column-gap: 3em;
+		column-gap: 3em;
+	}
+
+	.single {
+		width: 50%;
+	}
+
+	.singleLeft {
+		width: 50%;
+	}
+
+	.singleRight {
+		width: 50%;
+		margin: 0 0 3em 50%
+	}
+
+}
+
+@include media(tabletOnly) {
+
+	.tabs li:nth-child(2n) {
+		margin: 0 0 4% 0;
+	}
+}
+
+@include media(tabletLandscape) {
+	
+	.tabs {
+		padding: 4em 4em 0 4em;
+	}
+
+	.tabs li {
+		height: 12.5em;
+	}
+	
+	.two-col {
+		width: 90%;
+	}
+
+	.single {
+		width: 45%;
+	}
+
+	.singleLeft {
+		width: 45%;
+		margin: 0 0 3em 5%;
+	}
+
+	.singleRight {
+		width: 45%;
+		margin: 0 0 3em 50%;
+	}
+
+}
+
+@include media(tabletLandscapeUp) {
+	
+	.readings li {
+		width: 24% !important;
+		margin: 0 1% 2% 0 !important;
+		&:nth-child(4n) {
+			margin: 0 0 2% 0 !important;
+		}
+	}
+
+	#sections {
+		display: none;
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+	.desktop-nav {
+		display: block;
+	}
+
+	.inner {
+		width: 87%;
+	}
+
+}
+
+@include media(laptop) {
+
+	section, footer {
+		padding: 3em 2em;
+	}
+
+	.header-wrapper .inner {
+		padding: 0.5em 1.75em 0.75em;
+	}
+
+	.mission {
+		width:50%;
+		margin: 0 auto;
+	}
+
+	.tabs {
+		padding: 1em 0 0.5em 0;
+	}
+
+	.tabs li {
+		width: 23.5%;
+					margin: 0 2% 0 0;
+					padding: 2.5em 2em 2em 2em;
+					height: 16em;
+					&:nth-child(n+4) {
+						margin: 0;
+					}
+	}
+
+	.two-col {
+		width: 65%;
+	}
+
+	.single {
+		width: 32.5%;
+	}
+
+	.singleLeft {
+		width: 32.5%;
+		margin: 0 0 3em 17.5%;
+	}
+
+	.singleRight {
+		width: 32.5%;
+		margin: 0 0 3em 60%;
+	}
+
+}
+
+@include media(desktop) {
+
+	.hero {
+		margin: 20% auto 0;
+	}
+
+	.tabs li {
+		height: 14em;
+	}
+
+	.two-col {
+		width: 62%;
+	}
+
+	.single {
+		width: 31%;
+	}
+
+	.singleLeft {
+		width: 31%;
+		margin: 0 0 3em 19%;
+	}
+
+	.singleRight {
+		width: 31%;
+		margin: 0 0 3em 52%;
+	}
+
+
+}
