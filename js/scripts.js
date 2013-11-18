@@ -21,21 +21,19 @@ $('.close').click(function(){
   $('body').unbind('touchmove');
 });
 	
-$(".scroll").click(function(event){event.preventDefault();
-	$('html,body').animate({scrollTop:$(this.hash).offset().top - $('header').outerHeight()}, 550);
+$("a.scroll").click(function(event){event.preventDefault();
+	$('.wrapper').animate({scrollTop:$(this.hash).offset().top - $('header').outerHeight()}, 1000);
 });
 
 $('#sections a').click(function (e) {
-    e.preventDefault();               // prevent default anchor behavior
-    var goTo = this.href;             // store anchor href
-
+    e.preventDefault();
     $('body').removeClass('show-nav');
   $('.no-click').removeClass('show-nav').hide();
   $('body').unbind('touchmove');
 
-    setTimeout(function(){
-         window.location = goTo;
-    },500);});
+  $('body').delay(500).animate({scrollTop:$(this.hash).offset().top - $('#header').outerHeight()}, 550);
+
+});
 	
 
 });
